@@ -1,0 +1,20 @@
+"" Given an array of integers nums.
+
+A pair (i,j) is called good if nums[i] == nums[j] and i < j.
+
+Return the number of good pairs.""
+
+class Solution(object):
+    def numIdenticalPairs(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        num_list = []
+        if 1 <= len(nums) <= 100:
+            for i in range(len(nums)):
+                for j in range(len(nums)):
+                    if nums[i] == nums[j] and i<j:
+                        num_list.append([i,j])
+        return len(num_list)
+                        
